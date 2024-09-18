@@ -1,7 +1,7 @@
 class Solution {
 public:
     int removeElement(vector<int>& nums, int val) {
-        
+        // using 2 loops
         int count = nums.size();
         for(int i=0; i<nums.size(); i++)
         {
