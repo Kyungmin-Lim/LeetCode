@@ -15,8 +15,6 @@ public:
         }
         return j;
 
-        
-
 
         /*
         // it needs more memory, and one more loop needed.
