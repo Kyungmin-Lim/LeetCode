@@ -9,7 +9,7 @@ public:
         int idx=0;
         stringstream ss(s);
 
-        // To split string s, put s into stringstream.
+        // To split string s, put s into stringstream.  
         // using getline, string s is splitted into decimiter ' ' and saved as buffer
         while(getline(ss, buffer, ' '))
         {
