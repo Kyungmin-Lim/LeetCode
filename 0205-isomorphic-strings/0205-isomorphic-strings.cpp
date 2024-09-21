@@ -2,7 +2,26 @@ class Solution {
 public:
     bool isIsomorphic(string s, string t) {
         int num = s.size();
-        vector <int> mat(110);
+        // 256 arrays with initalize 0
+        vector <int> matS(256, 0);
+        vector <int> matT(256, 0);
+
+        for(int i=0; i<num; i++)
+        {
+            char s1 = s[i];
+            char t1 = t[i];
+            
+            if(matS[s1] != 0 && matS[s1] != t1 || matT[t1] != 0 && matT[t1] != s1)
+            {
+                return false;
+            }
+            matS[s1] = t1;
+            matT[t1] = s1;
+        }
+        return true;
+
+
+        /*
 
         for(int i=0; i<110; i++)
         {
@@ -26,6 +45,7 @@ public:
                 }
             }
         }
+        */
 
         /*
         for(int i=0; i<26; i++)
@@ -33,7 +53,7 @@ public:
            printf("%c ", char(mat[i] + 'a'));
         }
         */
-        sort(mat.begin(), mat.end(), greater <int>());
+        //sort(mat.begin(), mat.end(), greater <int>());
         //printf("\n num: %d \n", num);
         /*
         for(int i=0; i<26; i++)
@@ -43,6 +63,8 @@ public:
         }
         printf("\n num: %d \n", num);
         */
+
+        /*
         int tmp;
         for(int i=0; i<num-1; i++)
         {
@@ -59,7 +81,7 @@ public:
         }
 
         return true;
-
+*/
 
 /*
         unordered_map<char, char> m;
