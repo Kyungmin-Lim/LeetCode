@@ -24,20 +24,16 @@ public:
         }
         if(len != 0)
         {
-            // result.append(dst, 0, len);
             for(int i=0; i<len; i++)
             {
                 result += dst[i];
             }
-            //result.append(dst, len);
-            
-            //cout << result;
         }
         else
         {
             result = "";
         }
-        cout << len ;
+        //cout << len ;
         return result;
     }
 };
