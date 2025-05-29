@@ -25,7 +25,7 @@ public:
                 }
             }
             dst.push_back(s[i]);   
-            cout << s[i];
+            //cout << s[i];
         }
 
         if(Paren.empty())
