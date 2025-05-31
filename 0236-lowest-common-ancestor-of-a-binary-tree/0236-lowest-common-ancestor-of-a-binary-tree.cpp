@@ -13,9 +13,9 @@ private:
     TreeNode* ans;
 
 public:
-    Solution(){
-        this->ans = NULL;
-    }
+    // Solution(){
+    //     this->ans = NULL;
+    // }
     bool recursiveTree(TreeNode* node, TreeNode* p, TreeNode* q){
         if(node == NULL)
         {
