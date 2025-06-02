@@ -12,13 +12,13 @@ public:
         {
             if(arr[num] != i)
             {
-                missing_arr.push_back(i);
+               // missing_arr.push_back(i);
                 count++;
-                cout << "1. " << i << ": " << arr[num] << "    count: " << count<< endl;
+                //cout << "1. " << i << ": " << arr[num] << "    count: " << count<< endl;
             }
             else
             {
-                cout << "2. " <<i << ": " << arr[num] << "    count: " << count<< endl;
+                //cout << "2. " <<i << ": " << arr[num] << "    count: " << count<< endl;
                 num++;
                 
             }
