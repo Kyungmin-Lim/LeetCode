@@ -21,11 +21,12 @@ public:
             if(a==NULL)
             {
                 a = q;
-                cout << a->val << endl;
+                //cout << a->val << endl;
             }
             else
             {
                 a = a->parent;
+                /*
                 if(a==NULL)
                 {
                     cout << "a=NULL" << endl;
@@ -35,18 +36,19 @@ public:
                 {
                     cout << a->val << endl;
                 }
+                */
             }
             
 
             if(b==NULL)
             {
                 b = p;
-                cout << b->val << endl;
+                //cout << b->val << endl;
             }
             else
             {
                 b = b->parent;
-
+                /*
                 if(b==NULL)
                 {
                     cout << "b=NULL" << endl;
@@ -56,6 +58,7 @@ public:
                 {
                     cout << b->val << endl;
                 }
+                */
             }
             
 
