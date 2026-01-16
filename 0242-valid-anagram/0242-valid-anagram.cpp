@@ -1,49 +1,27 @@
 class Solution {
 public:
     bool isAnagram(string s, string t) {
-        if(s.size() != t.size())
-        {
-            return false;
-        }
-
-        /*
-        sort(s.begin(), s.end());
-        sort(t.begin(), t.end());
-
-        if(t==s)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-        */
-
+        int s_num = s.size();
         int t_num = t.size();
-        for(int i=0; i<s.size(); i++)
+        vector<int> freq('z'-'a'+1 ,0);
+
+        if(s_num != t_num)
         {
-            for(int j=0; j<t_num; j++)
+            return false;
+        }
+
+        for(int i=0; i<s_num; i++)
+        {
+            freq[s[i]-'a']++;
+            freq[t[i]-'a']--;
+        }
+        for(int i=0; i<freq.size(); i++)
+        {
+            if(freq[i] != 0)
             {
-                if(s[i]==t[j])
-                {
-                    t.erase(j, 1);
-                    
-                    t_num--;
-                    // cout << t << endl;
-                    break;
-                }
+                return false;
             }
         }
-        
-        if(t_num==0)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-        
+        return true;
     }
 };
