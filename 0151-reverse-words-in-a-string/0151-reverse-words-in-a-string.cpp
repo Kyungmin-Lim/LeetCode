@@ -5,6 +5,11 @@ public:
         stack<char> word;
         string result;
 
+
+        // time complexity: O(N)
+        // space cojplexity: O(N)
+
+
         for(int i=num-1; i>=0; i--)
         {
             if((s[i]==' ')&&(!word.empty()))
@@ -21,7 +26,6 @@ public:
             {
                 word.push(s[i]);
             }
-
         }
 
         while(!word.empty())
