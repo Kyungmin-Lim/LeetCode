@@ -9,6 +9,9 @@ public:
 
         prev = nums[0];
 
+        // Time complexity: O(N)
+        // Space complexity: O(1)
+
         for(int i=1; i<n; i++)
         {            
             curr = nums[i];
