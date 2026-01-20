@@ -1,69 +1,48 @@
 class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
-
-        // Time complexity: O(N^3) 
-        // Space complexity: O(N)
-        /*
         int n = nums.size();
         sort(nums.begin(), nums.end());
         set<vector<int>> tmp;
-        vector<vector<int>> output;
+        vector<vector<int>> result;
+
         for(int i=0; i<n-2; i++)
         {
-            for(int j=i+1; j<n-1; j++)
+            if((i>0)&&(nums[i]==nums[i-1]))
             {
-                for(int k=j+1; k<n; k++)
-                {
-                    if((nums[i]+nums[j]+nums[k]==0)&&(i!=j)&&(j!=k)&&(k!=i))
-                    {
-                        tmp.insert({nums[i], nums[j], nums[k]});
-                    }
-                }
+                continue;
             }
-        }
-        for(auto item: tmp)
-        {
-            output.push_back(item);
-        }
-        return output;
-    */
-
-
-        int n = nums.size();
-        vector<vector<int>> output;
-        set<vector<int>> tmp;
-        sort(nums.begin(), nums.end());
-    
-        for(int i=0; i<n-2; i++)
-        {
-            int low=i+1; 
-            int high=n-1;
-            while(low<high)
+            if(nums[i]>0)
             {
-                if(nums[i]+nums[low]+nums[high]<0)
-                {
-                    low++;
-                }
-                else if(nums[i]+nums[low]+nums[high]>0)
-                {
-                    high--;
-                }
-                else 
-                {
-                    tmp.insert({nums[i], nums[low], nums[high]});
-                    //while(nums[low]==nums[low+1]) low++;
-                    //while(nums[high]==nums[high-1]) high--;
-                    low++;
-                    high--;
-                }
+                break;
             }
+            int j=i+1;
+            int k=n-1;
+            while(j<k)
+            {
+                if(nums[i]+nums[j]+nums[k]==0)
+                {
+                    tmp.insert({nums[i], nums[j], nums[k]});
+                    j++;
+                    k--;
+                }
+                else if(nums[i]+nums[j]+nums[k]>0)
+                {
+                    k--;
+                }
+                else
+                {
+                    j++;
+                }
+            }            
         }
-        for(auto iter:tmp)
+        for(auto it:tmp)
         {
-            output.push_back(iter);
+            result.push_back(it);
         }
-        return output;
+
+        return result;
+
+        
     }
-
 };
