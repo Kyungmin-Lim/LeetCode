@@ -3,8 +3,10 @@ public:
     vector<vector<int>> threeSum(vector<int>& nums) {
         int n = nums.size();
         sort(nums.begin(), nums.end());
-        set<vector<int>> tmp;
         vector<vector<int>> result;
+        
+        // Time complexity: O(N^2)
+        // Space complexity: O(1)
 
         for(int i=0; i<n-2; i++)
         {
@@ -38,10 +40,6 @@ public:
                 }
             }            
         }
-        //for(auto it:tmp)
-        //{
-        //    result.push_back(it);
-        //}
 
         return result;
 
