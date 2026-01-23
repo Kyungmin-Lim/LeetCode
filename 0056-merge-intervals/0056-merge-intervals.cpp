@@ -4,6 +4,8 @@ public:
         int n = intervals.size();
         vector<vector<int>> result;
 
+        // Time complexity: O(NlogN) + O(N) = O(NlogN)
+        // Space complexity: O(1)
         sort(intervals.begin(), intervals.end());
 
         for(auto interval:intervals)
