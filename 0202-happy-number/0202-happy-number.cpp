@@ -16,6 +16,8 @@ public:
         int key = n;
 
         // unordered_map을 이용한 풀이.
+        // Time complexity: O(logN)
+        // Space complexity: O(logN)
 
         unordered_map<int, bool> map;
 
