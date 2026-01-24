@@ -4,6 +4,7 @@ public:
         int s_num = s.size();
         int t_num = t.size();
         vector<int> freq('z'-'a'+1 ,0);
+        cout<<freq.size()<<endl;
 
         if(s_num != t_num)
         {
