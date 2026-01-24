@@ -5,11 +5,11 @@ public:
 
         vector<vector<string>> result;
 
-        for(auto iter:strs)
+        for(const string& iter:strs)
         {
-            string val = iter;
-            sort(iter.begin(), iter.end());
-            map[iter].push_back(val);
+            string key = iter;
+            sort(key.begin(), key.end());
+            map[key].push_back(iter);
         }
         for(auto iter:map)
         {
