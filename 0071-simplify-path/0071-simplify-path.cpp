@@ -1,64 +1,53 @@
 class Solution {
 public:
     string simplifyPath(string path) {
-        int num = path.size();
-        stack<string> name;
-        
+        string result;
+        stack<string> st;
 
-        for(int i=0; i<num; i++)
+        for(int i=0; i<path.size(); i++)
         {
-
-            if(path[i] == '/')
+            if(path[i]=='/')
             {
                 continue;
-            }            
-            else
+            }
+            string tmp;
+            while(i<path.size() && path[i]!='/')
             {
-                string tmp;
-                while((path[i]!='/') && (i<num))
-                {
-                    tmp += path[i++];
-                }
+                tmp += path[i];
+                i++;
+            }
 
-                if(tmp == "..")
+            if(tmp==".")
+            {
+                continue;
+            }
+            if(tmp=="..")
+            {
+                if(!st.empty())
                 {
-                    if(!name.empty())
-                    {
-                        name.pop();
-                    }
-                    else
-                    {
-                        continue;
-                    }
-                }
-                else if(tmp==".")
-                {
-                    continue;
-                }
-                else
-                {
-                    name.push(tmp);
+                    st.pop();
                 }
             }
-        }
-        int dst_num = name.size();
-        string dst;
-
-
-        for(int i=0; i<dst_num; i++)
-        {
-            dst = "/" + name.top() + dst;
-            name.pop();
+            else
+            {
+                st.push(tmp);
+            }
             
-        }
-        if(dst_num==0)
+        } 
+
+        while(!st.empty())
         {
-            dst = "/";
+            result = "/" + st.top() + result;
+            st.pop();
         }
 
-        
-        return dst;
+        if(result.size()==0)
+        {
+            return "/";
+        }
 
-        
+
+        return result;
+
     }
 };
