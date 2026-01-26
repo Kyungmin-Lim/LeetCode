@@ -2,7 +2,7 @@ class Solution {
 public:
     string simplifyPath(string path) {
         string result;
-        stack<string> st;
+        vector<string> st;
 
         for(int i=0; i<path.size(); i++)
         {
@@ -25,23 +25,23 @@ public:
             {
                 if(!st.empty())
                 {
-                    st.pop();
+                    st.pop_back();
                 }
             }
             else
             {
-                st.push(tmp);
+                st.push_back(tmp);
             }
             
         } 
 
-        while(!st.empty())
+        for(auto it:st)
         {
-            result = "/" + st.top() + result;
-            st.pop();
+            result = result + "/" + it;
+            
         }
 
-        if(result.size()==0)
+        if(result.empty())
         {
             return "/";
         }
