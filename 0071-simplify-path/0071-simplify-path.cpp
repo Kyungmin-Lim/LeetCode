@@ -35,9 +35,9 @@ public:
             
         } 
 
-        for(const auto& it : st)
+        for(const string& it : st)
         {
-            result = result + "/" + it;
+            result += "/" + it;
             
         }
 
