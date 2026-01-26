@@ -35,7 +35,7 @@ public:
             
         } 
 
-        for(auto it:st)
+        for(const auto& it : st)
         {
             result = result + "/" + it;
             
