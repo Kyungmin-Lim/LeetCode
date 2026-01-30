@@ -16,8 +16,10 @@ public:
         {
             head;
         }
-        ListNode dummy(0, head);
+        // ListNode dummy(0, head);
         // dummy->next = head;
+        ListNode dummy = 0;
+        dummy.next = head;
         ListNode* prev=&dummy;
         for(int i=0; i<left-1; i++)
         {
