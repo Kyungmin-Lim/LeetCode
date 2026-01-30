@@ -27,15 +27,8 @@ public:
         for(int i=0; i<right-left; i++)
         {
             ListNode* move = curr->next;
-            if(move->next!=nullptr)
-            {
-                curr->next = move->next;
-            }
-            else
-            {
-                curr->next = nullptr;
-            }
-            
+            curr->next = move->next;
+           
             move->next = prev->next;
             prev->next=move;
             // move->next = curr;            
