@@ -25,13 +25,9 @@ public:
     }
 
     bool isSymmetric(TreeNode* root) {
-        if(!root->left && !root->right)
+        if(!root)
         {
             return true;
-        }
-        if(!root->left || !root->right || root->left->val!=root->right->val)
-        {
-            return false;
         }
         return isSubTreeSymmetric(root->left, root->right);
         
