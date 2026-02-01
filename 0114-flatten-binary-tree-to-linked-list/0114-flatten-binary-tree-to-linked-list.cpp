@@ -17,6 +17,9 @@ public:
             return;
         } 
 
+        // Time Complexity: O(N)
+        // Space Complexity: O(H)
+
         flatten(root->left);
         flatten(root->right);
 
