@@ -12,13 +12,14 @@
 class Solution {
 public:
     void flatten(TreeNode* root) {
+        /*
         if(!root)
         {
             return;
         } 
 
         // Time Complexity: O(N)
-        // Space Complexity: O(H)
+        // Space Complexity: O(H) H is height of tree. it can be O(N) when the worst case.
 
         flatten(root->left);
         flatten(root->right);
@@ -35,6 +36,30 @@ public:
                 curr = curr->right;                
             }
             curr->right = tmpRight;
-        }        
+        }  
+        */   
+
+
+        if(!root)
+        {
+            return;
+        }
+        TreeNode* curr = root;
+        while(curr)
+        {
+            if(curr->left)
+            {
+                TreeNode* last = curr->left;
+                while(last->right)
+                {
+                    last = last->right;
+                }
+                last->right = curr->right;
+                curr->right = curr->left;
+                curr->left = nullptr;
+            }
+            curr = curr->right;
+        }
     }
+    
 };
