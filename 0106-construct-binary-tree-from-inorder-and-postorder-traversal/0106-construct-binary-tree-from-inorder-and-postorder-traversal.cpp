@@ -14,6 +14,12 @@ class Solution {
     unordered_map<int, int> map;
 public:
     TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder) {
+        // inorder: left->root->right
+        // postorder: left->right->root
+
+        // Time complexity: O(N)
+        // Space complexity: O(N)
+
         for(int i=0; i<postorder.size(); i++)
         {
             map[inorder[i]]=i;
