@@ -12,30 +12,38 @@
 class Solution {
 public:
     int countNodes(TreeNode* root) {
-        if(root==nullptr)
+        if(!root)
         {
             return 0;
         }
-        int result = 1;
-
-        helper(root, result);
-
-        return result;
-                
-    }
-    void helper(TreeNode* root, int& result){
+        int num=0;
+        int left=1;
+        int right=1;
         TreeNode* curr = root;
+        while(curr->left)
+        {
+            left++;
+            curr=curr->left;
+        }
+        curr = root;
+        while(curr->right)
+        {
+            right++;
+            curr=curr->right;
+        }
         
-        if(curr->left)
+        if(left==right)
         {
-            result++;
-            helper(curr->left, result);
+            num= (1<<left)-1;
         }
-        if(curr->right)
+        else
         {
-            result++;
-            helper(curr->right, result);
+            num = 1+countNodes(root->left)+countNodes(root->right);
         }
-    }
+        return num;
 
+
+
+        
+    }
 };
