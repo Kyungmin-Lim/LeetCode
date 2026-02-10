@@ -13,8 +13,11 @@ class Solution {
 
 public:
     vector<int> rightSideView(TreeNode* root) {
-
+        /*
         // BFS solution
+        // Time complexity: O(N)
+        // Space complexity: O(W) : W is equal to width of tree. 
+        //                   The worst case is W = 0.5N -> O(N)
         queue<TreeNode*> q;
         vector<int> result;
 
@@ -46,7 +49,31 @@ public:
 
         }
         return result;
-    
+        */
+
+        // DFS solution
+        vector<int> result;
+        if(!root)
+        {
+            return result;
+        }
+        solve(0, root, result);
+
+        return result;
         
+    }
+
+    void solve(int level, TreeNode* node, vector<int>& result)
+    {
+        if(!node)
+            return;
+
+        if(level==result.size())
+        {
+            result.push_back(node->val);
+        }
+
+        solve(level+1, node->right, result);
+        solve(level+1, node->left, result);
     }
 };
