@@ -13,13 +13,16 @@ public:
     stack<ListNode*> s;
     ListNode* removeNthFromEnd(ListNode* head, int n) {
         
-        ListNode* Dummy = new ListNode(0);
-        Dummy->next = head;
-        ListNode* curr = head;
+        // Time complexity: O(N)
+        // Space complexity: O(N)
+
+        ListNode Dummy(0);
+        Dummy.next = head;
+        ListNode* curr = &Dummy;
 
         int num=0;
 
-        s.push(Dummy);
+        //s.push(Dummy);
         while(curr)
         {
             num++;
@@ -36,7 +39,7 @@ public:
 
         curr->next = dst;
 
-        return Dummy->next;
+        return Dummy.next;
 
         
     }
