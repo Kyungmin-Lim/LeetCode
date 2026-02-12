@@ -11,43 +11,23 @@
  */
 class Solution {
 public:
-    int minVal = INT_MAX;
+    int minVal = INT_MAX;  
+    int prevVal = -1;
     int getMinimumDifference(TreeNode* root) {
-        int rootVal = 0;
-        int leftVal = 0;
-        int rightVal = 0;
-        if(root)
+        if(!root)
         {
-            rootVal = root->val;
-        }
-        else
-        {   
-            return INT_MAX;            
-        }
-        if(root->left)
-        {
-            leftVal = root->left->val;            
-        }
-        else
-        {
-            leftVal = INT_MAX>>1;
-        }
-        if(root->right)
-        {
-            rightVal = root->right->val;            
-        }
-        else
-        {
-            rightVal = INT_MAX;
-        }
-
-        int currMin = min(min(abs(rightVal-leftVal), abs(rootVal-leftVal)), abs(rootVal-rightVal));
-        minVal =  min(minVal, currMin);
-
+            return minVal;
+        }              
         getMinimumDifference(root->left);
-        getMinimumDifference(root->right);
 
-        return minVal;
+        if(prevVal!=-1)
+        {
+            minVal = min(abs(prevVal-root->val), minVal);            
+        }
+        prevVal = root->val;
+        
+        getMinimumDifference(root->right);   
+        return minVal;   
         
     }
 };
