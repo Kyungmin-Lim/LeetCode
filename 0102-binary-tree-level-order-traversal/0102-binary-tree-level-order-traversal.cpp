@@ -11,9 +11,22 @@
  */
 class Solution {
 public:
+    vector<vector<int>> result;
     vector<vector<int>> levelOrder(TreeNode* root) {
-        vector<vector<int>> result;
+        // DFS solution
+        SearchDFS(root, 0);
+        return result;
 
+
+
+
+    /*    
+        // BFS solution
+        // Time complexity: O(N)
+        // Space complexity: O(N/2)=O(N) when maximum width.
+
+        vector<vector<int>> result;
+        
         if(!root)
         {
             return result;
@@ -45,6 +58,23 @@ public:
             currentLevel.clear();
         }
         return result;
-        
+    */    
+    }
+    void SearchDFS(TreeNode* root, int level)
+    {        
+        if(!root)
+        {
+            return;
+        }
+        if(result.size()==level)
+        {
+            result.push_back({});
+        }
+
+        result[level].push_back(root->val);
+
+        SearchDFS(root->left, level+1);
+        SearchDFS(root->right, level+1);
+
     }
 };
