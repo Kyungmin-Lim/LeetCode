@@ -14,11 +14,10 @@ public:
     vector<vector<int>> result;
     vector<vector<int>> levelOrder(TreeNode* root) {
         // DFS solution
+        // Time complexity: O(N)
+        // Space complexity: O(H) H is the height of the binary tree. it can be O(logN) in the best case, or O(N) when it is skewed
         SearchDFS(root, 0);
         return result;
-
-
-
 
     /*    
         // BFS solution
