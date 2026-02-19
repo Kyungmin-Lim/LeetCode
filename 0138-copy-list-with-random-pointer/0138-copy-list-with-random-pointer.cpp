@@ -17,6 +17,8 @@ public:
 class Solution {
 public:
     Node* copyRandomList(Node* head) {
+        // Time complexity: O(N)
+        // Space complexity: O(N)
         unordered_map<Node*, Node*> map;
         if(!head)
         {
@@ -34,7 +36,6 @@ public:
             map[curr]->next = map[curr->next];
             map[curr]->random = map[curr->random];
             curr = curr->next;
-
         }
         return map[head];        
     }
