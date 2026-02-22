@@ -1,6 +1,8 @@
 class Solution {
 public:
     bool containsNearbyDuplicate(vector<int>& nums, int k) {
+        // Time complexity: O(N)
+        // Space complexity: O(N)
         unordered_map<int, int> map;
         int dist=INT_MAX;
         
@@ -11,6 +13,10 @@ public:
                 if(abs(i - map[nums[i]]) < dist)
                 {
                     dist = abs(i - map[nums[i]]);
+                    if(dist <= k)
+                    {
+                        return true;
+                    }
                 }                
             }
             map[nums[i]] = i;
