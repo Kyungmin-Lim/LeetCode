@@ -1,6 +1,51 @@
 class Solution {
 public:
     bool isValidSudoku(vector<vector<char>>& board) {
+
+        int row = board.size();
+        int col = board[0].size();
+
+        bool Row[9][9] = {false};
+        bool Col[9][9] = {false};
+        bool SubBox[3][3][9] = {false};
+
+        for(int i=0; i<row; i++)
+        {
+            for(int j=0; j<col; j++)
+            {
+                if(board[i][j]=='.')
+                {
+                    continue;
+                }
+                int val = board[i][j]-'1';
+
+                if(Row[i][val])
+                {
+                    return false;
+                }
+                Row[i][val] = true;
+
+                if(Col[val][j])
+                {
+                    return false;
+                }
+                Col[val][j] = true;
+
+                int idx_x = i/3;
+                int idx_y = j/3;
+                if(SubBox[idx_x][idx_y][val])
+                {
+                    return false;
+                }
+                SubBox[idx_x][idx_y][val] = true;
+            }
+        }
+        return true;
+
+
+/*
+        // Time complexity: O(3x9x9)=O(N)        
+        // Space complexity: O(1)
         int row = board.size();
         int col = board[0].size();
 
@@ -30,8 +75,10 @@ public:
             }
         }
         return true;
+        */
     }
 
+/*
     bool isValidRow(vector<vector<char>>& board, int row)
     {
         vector<char> mat(9, 0);
@@ -99,4 +146,6 @@ public:
         return true;
 
     }
+*/
+
 };
