@@ -7,7 +7,7 @@ public:
         while(n>=div)
         {
             result += n/div;
-            div = div*5;
+            n = n/div;
         }
 
         return result;
