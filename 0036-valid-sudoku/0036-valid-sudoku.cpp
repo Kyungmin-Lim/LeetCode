@@ -1,7 +1,8 @@
 class Solution {
 public:
     bool isValidSudoku(vector<vector<char>>& board) {
-
+        // Time complexity: O(9x9)=O(N)
+        // Space complexity: O(1)
         int row = board.size();
         int col = board[0].size();
 
