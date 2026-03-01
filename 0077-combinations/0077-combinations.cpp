@@ -17,8 +17,9 @@ public:
             result.push_back(path);
             return;
         }
-
-        for(int i=start; i<=n; i++)
+        
+        // for(int i=start; i<=n; i++)
+        for(int i=start; i<=n-(k-path.size())+1; i++)
         {
             path.push_back(i);
             backtracking(i+1, n, k, path, result);
