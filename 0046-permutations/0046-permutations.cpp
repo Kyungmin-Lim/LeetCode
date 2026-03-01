@@ -1,6 +1,9 @@
 class Solution {
 public:
     vector<vector<int>> permute(vector<int>& nums) {
+        // Time complexity: O(n x nPn) : n is the number of elements in nums
+        // Space complexity: O(2n): spaces for bool and path
+
         int N = nums.size();
         
         vector<int> path;
