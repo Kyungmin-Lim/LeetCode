@@ -3,6 +3,12 @@ public:
     vector<string> letterCombinations(string digits) {
         int n = digits.size();
         vector<string> result;
+        if(n==0)
+        {
+            result.push_back("");
+            return result;
+        }
+        
         string path;
         unordered_map<char, string> phone;
         phone['2'] = "abc";
