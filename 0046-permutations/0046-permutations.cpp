@@ -1,9 +1,33 @@
 class Solution {
 public:
     vector<vector<int>> permute(vector<int>& nums) {
+        
+        int start = 0;     
+        vector<vector<int>> result;   
+        backtracking(start, nums, result);
+        return result;  
+    }
+    void backtracking(int start, vector<int>& nums, vector<vector<int>>& result)
+    {
+        if(start==(nums.size()-1))
+        {
+            result.push_back(nums);
+            return;
+        }
+
+        for(int i=start; i<nums.size(); i++)
+        {
+            swap(nums[start], nums[i]);
+            backtracking(start+1, nums, result);
+            swap(nums[start], nums[i]);
+        }
+    }
+
+
+/*
+    vector<vector<int>> permute(vector<int>& nums) {
         // Time complexity: O(n x nPn) : n is the number of elements in nums
         // Space complexity: O(2n): spaces for bool and path
-
         int N = nums.size();
         
         vector<int> path;
@@ -34,4 +58,5 @@ public:
             }         
         }
     }
+*/
 };
