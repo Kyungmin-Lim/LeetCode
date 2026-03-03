@@ -1,6 +1,10 @@
 class Solution {
 public:
     bool exist(vector<vector<char>>& board, string word) {
+        // Time complexity: O(MxNx3^L) : L is the length of word
+        // Space complexity: O(L) : the maximum stack depth of recursion.
+
+
         int row = 0;
         int col = 0;        
         int chk = 0;        
