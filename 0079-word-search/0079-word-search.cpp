@@ -19,7 +19,7 @@ public:
 
         return false;
     }
-    bool backtracking(int& chk, int row, int col, vector<vector<char>>& board, string& word)
+    bool backtracking(int chk, int row, int col, vector<vector<char>>& board, string& word)
     {        
         if(chk == word.size())
         {            
