@@ -36,14 +36,14 @@ public:
         {
             char tmp = word[chk];
             board[row][col] = '#'; // check this position as visited.
-            chk++;
-            found = backtracking(chk, row+1, col, board, word)||
-                    backtracking(chk, row, col+1, board, word)||
-                    backtracking(chk, row-1, col, board, word)||
-                    backtracking(chk, row, col-1, board, word);
+
+            found = backtracking(chk+1, row+1, col, board, word)||
+                    backtracking(chk+1, row, col+1, board, word)||
+                    backtracking(chk+1, row-1, col, board, word)||
+                    backtracking(chk+1, row, col-1, board, word);
 
             board[row][col] = tmp; // check this position as not-visited.
-            chk--;
+
         }
         return found;
     }
