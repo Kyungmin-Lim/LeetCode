@@ -1,6 +1,10 @@
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
+        // Time complexity: O(N)
+        // Space complexity: O(1)
+
+
         vector<int> lastPos(128, -1);
         int result = 0;
         int right=0;
@@ -16,7 +20,7 @@ public:
             }
             else
             {                
-                left = lastPos[idx]+1;
+                left = lastPos[idx]+1; // This part is very interesting. left should go to just +1 after duplicated character index.
                 lastPos[idx] = right;
             }
         }
