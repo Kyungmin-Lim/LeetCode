@@ -1,25 +1,37 @@
 class Solution {
 public:
-    void bracketing(vector<string>&result, string current, int open_count, int close_count, int n){
-        if((open_count==n)&&(close_count==n))
-        {
-            result.push_back(current);
-        }
-        if(open_count<n)
-        {
-            bracketing(result, current+'(', open_count+1, close_count, n);
-        }
-        if((close_count<n)&&(close_count<open_count))
-        {
-            bracketing(result, current+')', open_count, close_count+1, n);
-        }
-    }
     vector<string> generateParenthesis(int n) {
         vector<string> result;
-        int open_count=0;
-        int close_count=0; 
-        bracketing(result, "", open_count, close_count, n);
+        string paren;
+        int open=0;
+        int close=0;
+        backtracking(result, paren, open, close, n);
+
         return result;
-        
+    }
+    void backtracking(vector<string>& result, string paren, int open, int close, int n)
+    {
+        if(paren.size() == n*2)
+        {
+            result.push_back(paren);
+            return;
+        }
+
+        if(open>=close)
+        {            
+            if(open<n)
+            {                
+                paren.push_back('(');                
+                backtracking(result, paren, open+1, close, n);
+                paren.pop_back();
+            }
+            
+            if(close<n)
+            {
+                paren.push_back(')');
+                backtracking(result, paren, open, close+1, n);
+                paren.pop_back();
+            }
+        }
     }
 };
