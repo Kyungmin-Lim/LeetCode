@@ -26,10 +26,12 @@
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0022-generate-parentheses](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0022-generate-parentheses/) | Medium |
 | [0079-word-search](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0079-word-search/) | Medium |
 ## Backtracking
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0022-generate-parentheses](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0022-generate-parentheses/) | Medium |
 | [0079-word-search](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0079-word-search/) | Medium |
 ## Depth-First Search
 | Problem Name | Difficulty |
@@ -39,4 +41,8 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0079-word-search](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0079-word-search/) | Medium |
+## Dynamic Programming
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0022-generate-parentheses](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0022-generate-parentheses/) | Medium |
 <!---LeetCode Topics End-->
