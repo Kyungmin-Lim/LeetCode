@@ -1,9 +1,9 @@
 class Solution {
 public:
     bool isPalindrome(int x) {
-        // Time complexity: O(N) - N is the digits of number
+        // Time complexity: O(log10N) 
         // Space complexity: O(1)
-                
+
         long long rev=0;
         long long num = x;
         
