@@ -12,7 +12,7 @@ public:
 
         return result;
     }
-    void backtracking(vector<string>& result, string paren, int open, int close, int n)
+    void backtracking(vector<string>& result, string& paren, int open, int close, int n)
     {
         if(paren.size() == n*2)
         {
