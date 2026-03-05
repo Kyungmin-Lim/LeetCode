@@ -1,6 +1,9 @@
 class Solution {
 public:
     vector<string> generateParenthesis(int n) {
+        // Time complexity: O() ???
+        // Space complexity: O(2N) = O(N) because we have to recussively call backtracking function 2N times. 
+
         vector<string> result;
         string paren;
         int open=0;
