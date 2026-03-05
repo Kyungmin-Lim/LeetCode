@@ -13,6 +13,7 @@
 ## Math
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0009-palindrome-number](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0009-palindrome-number/) | Easy |
 | [0380-insert-delete-getrandom-o1](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 ## Design
 | Problem Name | Difficulty |
