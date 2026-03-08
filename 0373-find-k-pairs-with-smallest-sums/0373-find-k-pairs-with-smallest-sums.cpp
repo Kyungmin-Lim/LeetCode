@@ -23,7 +23,7 @@ public:
         }
 
         vector<vector<int>> result;
-        while(k--)
+        while(k-- && !minHeap.empty())
         {
             Node val = minHeap.top();
             int i = val.i;
@@ -33,7 +33,7 @@ public:
 
             if(i<nums1.size() && j+1<nums2.size())
             {
-                minHeap.push(Node(nums1[i]+nums2[j+1], i, j+1));
+                minHeap.push({nums1[i]+nums2[j+1], i, j+1});
             }
 
         }
