@@ -1,6 +1,10 @@
 class Solution {
 public:
     void setZeroes(vector<vector<int>>& matrix) {
+        // Time complexity: O(MxN)
+        // Space complexity: O(M+N) - Big O notation is calculated as we meet the worst case. 
+        // There is constant space solution!!!
+        
         set<int> row;
         set<int> col;
 
@@ -35,6 +39,8 @@ public:
             }
             col.erase(col.begin());
         }
+
+        
     
     }
 };
