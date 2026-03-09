@@ -4,6 +4,7 @@
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0073-set-matrix-zeroes](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0073-set-matrix-zeroes/) | Medium |
 | [0079-word-search](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0079-word-search/) | Medium |
 | [0215-kth-largest-element-in-an-array](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0215-kth-largest-element-in-an-array/) | Medium |
 | [0373-find-k-pairs-with-smallest-sums](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0373-find-k-pairs-with-smallest-sums/) | Medium |
@@ -12,6 +13,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0003-longest-substring-without-repeating-characters/) | Medium |
+| [0073-set-matrix-zeroes](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0073-set-matrix-zeroes/) | Medium |
 | [0380-insert-delete-getrandom-o1](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 ## Math
 | Problem Name | Difficulty |
@@ -44,6 +46,7 @@
 ## Matrix
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0073-set-matrix-zeroes](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0073-set-matrix-zeroes/) | Medium |
 | [0079-word-search](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0079-word-search/) | Medium |
 ## Dynamic Programming
 | Problem Name | Difficulty |
