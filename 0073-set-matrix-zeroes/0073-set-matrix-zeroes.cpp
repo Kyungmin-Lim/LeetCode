@@ -1,7 +1,8 @@
 class Solution {
 public:
     void setZeroes(vector<vector<int>>& matrix) {
-
+        // Time complexity: O(MxN)
+        // Space complexity: O(1)
         bool rowZero = false;
         bool colZero = false;
 
