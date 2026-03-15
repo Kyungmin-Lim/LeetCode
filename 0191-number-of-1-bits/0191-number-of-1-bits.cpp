@@ -1,16 +1,18 @@
 class Solution {
 public:
     int hammingWeight(int n) {
+        // Time complexity: O(log2n)
+        // Space complexity: O(1)
         long long chk=1;
         int result = 0;
 
-        while(chk<=n)
+        while(n>0)
         {
             if(n & chk)
             {
                 result++;
             }
-            chk = chk << 1;
+            n = n >> 1;
         }
         return result;
         
