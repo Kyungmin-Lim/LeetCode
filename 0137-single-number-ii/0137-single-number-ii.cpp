@@ -1,6 +1,8 @@
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {
+        // Time complexity: O(32n) = O(n)
+        // Space complexity: O(1)
         int result=0;
         int sum=0;
         for(int i=0; i<32; i++)
