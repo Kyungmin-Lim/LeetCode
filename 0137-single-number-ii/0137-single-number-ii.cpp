@@ -1,6 +1,24 @@
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {
+        int result=0;
+        int sum=0;
+        for(int i=0; i<32; i++)
+        {
+            sum = 0;
+            for(int num : nums)
+            {
+                sum += ((num>>i) & 1);
+            }
+            if(sum%3)
+            {
+                result = result | (1<<i);
+            }
+        }
+        return result;
+        /*
+        //Time complexity: O(nlogn) - because of sorting
+        //Space complexity: O(1)
         sort(nums.begin(), nums.end());
 
         int result = 0;
@@ -36,6 +54,7 @@ public:
             }
         }
         return result;
+        */
         
     }
 };
