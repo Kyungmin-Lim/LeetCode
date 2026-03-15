@@ -3,7 +3,7 @@ public:
     int hammingWeight(int n) {
         // Time complexity: O(log2n)
         // Space complexity: O(1)
-        long long chk=1;
+        int chk=1;
         int result = 0;
 
         while(n>0)
