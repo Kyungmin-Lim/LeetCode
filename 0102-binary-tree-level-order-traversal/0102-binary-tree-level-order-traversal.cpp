@@ -13,16 +13,16 @@ class Solution {
 public:
     vector<vector<int>> levelOrder(TreeNode* root) {
         // BFS approach.
+        // Time complexity: O(N)
+        // Space complexity: O(N)
 
         queue<TreeNode*> q;
         vector<vector<int>> result;
 
-        TreeNode* node = root;
-        if(!node)
+        if(!root)
         {
             return result;
-        }
-       
+        }       
         q.push(root);
         while(!q.empty())
         {
