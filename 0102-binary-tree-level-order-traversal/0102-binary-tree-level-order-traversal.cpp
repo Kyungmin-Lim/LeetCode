@@ -11,69 +11,40 @@
  */
 class Solution {
 public:
-    vector<vector<int>> result;
     vector<vector<int>> levelOrder(TreeNode* root) {
-        // DFS solution
-        // Time complexity: O(N)
-        // Space complexity: O(H) H is the height of the binary tree. it can be O(logN) in the best case, or O(N) when it is skewed
-        SearchDFS(root, 0);
-        return result;
+        // BFS approach.
 
-    /*    
-        // BFS solution
-        // Time complexity: O(N)
-        // Space complexity: O(N/2)=O(N) when maximum width.
-
+        queue<TreeNode*> q;
         vector<vector<int>> result;
-        
-        if(!root)
+
+        TreeNode* node = root;
+        if(!node)
         {
             return result;
         }
-
-        queue<TreeNode*> q;
+       
         q.push(root);
-
         while(!q.empty())
         {
             int num = q.size();
-            vector<int> currentLevel;
+            vector<int> level;
             for(int i=0; i<num; i++)
-            {
-                TreeNode* node = q.front();
+            {   
+                TreeNode* tmp = q.front();
                 q.pop();
-                currentLevel.push_back(node->val);                
-
-                if(node->left)
+                level.push_back(tmp->val);
+                
+                if(tmp->left)
                 {
-                    q.push(node->left);
+                    q.push(tmp->left);
                 }
-                if(node->right)
+                if(tmp->right)
                 {
-                    q.push(node->right);
+                    q.push(tmp->right);
                 }
             }
-            result.push_back(currentLevel);            
-            currentLevel.clear();
+            result.push_back(level);
         }
         return result;
-    */    
-    }
-    void SearchDFS(TreeNode* root, int level)
-    {        
-        if(!root)
-        {
-            return;
-        }
-        if(result.size()==level)
-        {
-            result.push_back({});
-        }
-
-        result[level].push_back(root->val);
-
-        SearchDFS(root->left, level+1);
-        SearchDFS(root->right, level+1);
-
     }
 };
