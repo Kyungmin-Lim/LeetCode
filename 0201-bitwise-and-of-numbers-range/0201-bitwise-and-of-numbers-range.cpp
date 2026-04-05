@@ -5,22 +5,19 @@ public:
         {
             return left;
         }
-        else
-        {
-            int digit_left = (left==0)? 1: floor(log(left))+1;
-            int digit_right = (right==0)? 1: floor(log(right))+1;
-            
-            if(digit_left+1<digit_right)
+        int result = 0;
+        int left_num = (left==0)? 1: log(left)+1;
+        int count = 0;
+        while(left!=0)
+        {           
+            if(right == left)
             {
-                right = left<<1;
+                result += 1<<count;
             }
-        }
-        int result=left;
-        for(long long i=left+1; i<=right; i++)
-        {
-            result = result&i;
-        }
-
-        return result;
+            left = left>>1;
+            right = right>>1;
+            count++;
+        }  
+        return result;      
     }
 };
