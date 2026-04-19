@@ -2,29 +2,33 @@ class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
         // Time complexity: O(N)
-        // Space complexity: O(1)
+        // Space complexity: O(min(N, M)) - N is the length of string, M is the number of unique characters.
 
-
-        vector<int> lastPos(128, -1);
-        int result = 0;
-        int right=0;
+        int length = 0;
+        unordered_map<char, int> m;
+        int right=0; 
         int left=0;
-        for(right=0; right<s.size(); right++)
-        {
-            int idx = s[right];
 
-            if(lastPos[idx]<left)
+        for(int i=0; i<s.size(); i++)
+        {
+            right = i;                
+            if(m.find(s[i])!=m.end())
             {
-                result = max(result, right-left+1);
-                lastPos[idx] = right;
+                if(m[s[i]]>=left)
+                {
+                    left = m[s[i]]+1;
+                }
             }
-            else
-            {                
-                left = lastPos[idx]+1; // This part is very interesting. left should go to just +1 after duplicated character index.
-                lastPos[idx] = right;
-            }
+
+            m[s[i]] = i;
+
+            int curr_len = right-left+1;
+            length = max(length, curr_len);
+
         }
-        return result;
+        
+        return length;
+
         
     }
 };
