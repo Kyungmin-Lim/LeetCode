@@ -1,6 +1,8 @@
 class Solution {
 public:
     string longestPalindrome(string s) {
+        // Time complexity: O(N^2)
+        // Space coplexity: O(1)
         string result;
         int len = 0;
         int idx_s = 0;
