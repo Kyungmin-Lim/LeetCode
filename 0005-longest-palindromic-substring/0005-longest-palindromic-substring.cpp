@@ -87,7 +87,7 @@ public:
         {
             result.push_back(s[0]);
         }
-        cout << len << endl;
+        //cout << len << endl;
         return result;
         
     }
