@@ -37,6 +37,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0003-longest-substring-without-repeating-characters/) | Medium |
+| [0005-longest-palindromic-substring](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0005-longest-palindromic-substring/) | Medium |
 | [0022-generate-parentheses](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0022-generate-parentheses/) | Medium |
 | [0079-word-search](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0079-word-search/) | Medium |
 ## Backtracking
@@ -57,6 +58,7 @@
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0005-longest-palindromic-substring](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0005-longest-palindromic-substring/) | Medium |
 | [0022-generate-parentheses](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0022-generate-parentheses/) | Medium |
 ## Sliding Window
 | Problem Name | Difficulty |
@@ -93,6 +95,7 @@
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0005-longest-palindromic-substring](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0005-longest-palindromic-substring/) | Medium |
 | [0011-container-with-most-water](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0011-container-with-most-water/) | Medium |
 ## Greedy
 | Problem Name | Difficulty |
