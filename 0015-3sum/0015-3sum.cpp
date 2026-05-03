@@ -22,11 +22,11 @@ public:
                     end--;                    
                     start++;
 
-                    while(nums[end] == nums[end+1] && end>0)
+                    while(nums[end] == nums[end+1] && start<end)
                     {
                         end--;
                     }
-                    while(nums[start] == nums[start-1] && start<n-1)
+                    while(nums[start] == nums[start-1] && start<end)
                     {
                         start++;
                     }
