@@ -29,6 +29,7 @@ public:
             Curr = Curr->next;
         }
 
+        /*
         while(list1)
         {
             Curr->next = list1;
@@ -41,6 +42,8 @@ public:
             Curr = Curr->next;
             list2 = list2->next;
         }
+        */
+        Curr->next = list1? list1 : list2;
 
         return Dummy.next;
     }
