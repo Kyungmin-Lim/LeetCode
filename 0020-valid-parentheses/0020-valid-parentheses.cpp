@@ -1,72 +1,52 @@
 class Solution {
 public:
-    char convert(char s)
-    {
-        if(s == '(')
-        {
-            return ')';
-        }
-        else if(s == '{')
-        {
-            return '}';
-        }
-        else if(s == '[')
-        {
-            return ']';
-        }
-        else
-        {
-            return '0';
-        }
-    }
-
-
-
     bool isValid(string s) {
+        stack<char> buff;
+        int n = s.size();
 
-        int num = s.size();
-        if(num <= 1)
+        for(int i=0; i<n; i++)
         {
-            return false;
-        }
-
-        stack<char> bracket;
-        char tmp;
-
-        for(int i=0; i<num; i++)
-        {
-            tmp = convert(s[i]);
-
-            if(bracket.empty())
+            if(buff.empty())            
             {
-                if(tmp=='0')
+                if((s[i]=='(')||(s[i]=='{')||(s[i]=='['))
+                {
+                    buff.push(s[i]);
+                }
+                else
                 {
                     return false;
                 }
-                else
-                {
-                    bracket.push(tmp);
-                }                                    
             }
             else
             {
-                 if(bracket.top() == s[i])
+                if((s[i]=='(')||(s[i]=='{')||(s[i]=='['))
                 {
-                    bracket.pop();
-                    cout << "pop: " << s[i] << endl;
+                    buff.push(s[i]);
                 }
                 else
-                {                    
-                    bracket.push(tmp);
-                    cout << "push: " << tmp << endl;
+                {
+                    char tmp = buff.top();
+                    
+                    if(s[i]==')' && tmp=='(')
+                    {
+                        buff.pop();
+                    }
+                    else if(s[i]=='}' && tmp=='{')
+                    {
+                        buff.pop();
+                    }
+                    else if(s[i]==']' && tmp=='[')
+                    {
+                        buff.pop();
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
-
             }
-            
-            
-           
         }
-        if(bracket.empty())
+        if(buff.empty())
         {
             return true;
         }
@@ -74,6 +54,8 @@ public:
         {
             return false;
         }
+
+        
         
     }
 };
