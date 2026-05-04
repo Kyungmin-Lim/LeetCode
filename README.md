@@ -39,6 +39,7 @@
 | ------- | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0003-longest-substring-without-repeating-characters/) | Medium |
 | [0005-longest-palindromic-substring](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0005-longest-palindromic-substring/) | Medium |
+| [0020-valid-parentheses](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0020-valid-parentheses/) | Easy |
 | [0022-generate-parentheses](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0022-generate-parentheses/) | Medium |
 | [0079-word-search](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0079-word-search/) | Medium |
 ## Backtracking
@@ -121,4 +122,8 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0019-remove-nth-node-from-end-of-list](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0019-remove-nth-node-from-end-of-list/) | Medium |
+## Stack
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0020-valid-parentheses](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0020-valid-parentheses/) | Easy |
 <!---LeetCode Topics End-->
