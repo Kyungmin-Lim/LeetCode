@@ -1,6 +1,8 @@
 class Solution {
 public:
     bool isValid(string s) {
+        // Time complexity: O(n)
+        // Space complexity: O(n)
         stack<char> buff;
         int n = s.size();
 
