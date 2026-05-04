@@ -5,6 +5,11 @@ public:
         // Space complexity: O(1)
         vector<vector<int>> result;
         int n = nums.size();
+        if(n<3)
+        {
+            return result;
+        }
+        
 
         sort(nums.begin(), nums.end());
 
@@ -36,21 +41,11 @@ public:
                 else if(-1*nums[i] > nums[start]+nums[end])
                 {
                     start++;
-                    while(nums[start] == nums[start-1] && start<n-1)
-                    {
-                        start++;
-                    }
                 }
                 else //(-1*nums[i] < nums[start]+nums[end])
                 {
                     end--;
-                    while(nums[end] == nums[end+1] && end>1)
-                    {
-                        end--;
-                    }
                 }
-
-
             }
            
         }
