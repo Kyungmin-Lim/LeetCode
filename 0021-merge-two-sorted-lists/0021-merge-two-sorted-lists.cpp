@@ -9,69 +9,39 @@
  * };
  */
 class Solution {
-    ListNode *dst;
 public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
-        if((list1 == NULL) && (list2 == NULL))
-        {
-            dst = NULL;
-            return dst;
-        }
-        
-        if(list1 == NULL)
-        {
-            dst = list2;
-            return dst;
-        }
-            
-        if(list2 == NULL)
-        {
-            dst = list1;
-            return dst;
-        }            
+        ListNode Dummy = ListNode(0);    
+        ListNode *Curr = &Dummy;   
 
-        if(list1->val > list2->val)
+        while(list1 && list2)
         {
-            dst = list2;
-            //if(list2->next != NULL)
-            list2 = list2->next;
-        }
-        else
-        {
-            dst = list1;
-            //if(list1->next != NULL)
-            list1 = list1->next;
-        }
-       
-        ListNode *curr=dst;
-
-        while(list1 != NULL && list2 != NULL)
-        {
-            if(list1->val > list2->val)
+            if(list1->val < list2->val)
             {
-                curr->next = list2;
-                //if(list2->next != NULL)
-                list2 = list2->next;
-            }
-            else
-            {   
-                curr->next = list1;
-                //if(list1->next != NULL)
+                Curr->next = list1;
                 list1 = list1->next;
             }
-            curr = curr->next;
+            else
+            {
+                Curr->next = list2;
+                list2 = list2->next;
+            }
+            Curr = Curr->next;
         }
 
-        if(list1 != NULL)
+        while(list1)
         {
-            curr->next = list1;            
-        }  
-
-        if(list2 != NULL)
+            Curr->next = list1;
+            Curr = Curr->next;
+            list1 = list1->next;
+        }
+        while(list2)
         {
-            curr->next = list2;            
-        }  
+            Curr->next = list2;
+            Curr = Curr->next;
+            list2 = list2->next;
+        }
 
-        return dst;
+        return Dummy.next;
     }
 };
