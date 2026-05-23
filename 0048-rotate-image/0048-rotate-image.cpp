@@ -3,7 +3,7 @@ public:
     void rotate(vector<vector<int>>& matrix) {
         // Time complexity: O(N^2)
         // Space complextity: O(1)
-        
+        /*
         int buffer = 0;
         int n = matrix[0].size();
 
@@ -30,5 +30,26 @@ public:
 
             }
         }
+        */
+
+
+        // Transpose
+        int n = matrix[0].size();
+        for(int i=0; i<n; i++)
+        {
+            for(int j=i+1; j<n; j++)
+            {
+                int buffer = matrix[i][j];
+                matrix[i][j] = matrix[j][i];
+                matrix[j][i] = buffer;
+            }
+        }
+
+        // reverse for each row
+        for(int i=0; i<n; i++)
+        {
+            reverse(matrix[i].begin(), matrix[i].end());
+        }
+
     }
 };
