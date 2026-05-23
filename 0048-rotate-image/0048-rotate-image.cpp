@@ -1,6 +1,9 @@
 class Solution {
 public:
     void rotate(vector<vector<int>>& matrix) {
+        // Time complexity: O(N^2)
+        // Space complextity: O(1)
+        
         int buffer = 0;
         int n = matrix[0].size();
 
