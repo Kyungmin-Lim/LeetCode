@@ -8,6 +8,7 @@
 | [0011-container-with-most-water](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0011-container-with-most-water/) | Medium |
 | [0015-3sum](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0015-3sum/) | Medium |
 | [0033-search-in-rotated-sorted-array](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0033-search-in-rotated-sorted-array/) | Medium |
+| [0048-rotate-image](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0048-rotate-image/) | Medium |
 | [0073-set-matrix-zeroes](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0073-set-matrix-zeroes/) | Medium |
 | [0074-search-a-2d-matrix](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0074-search-a-2d-matrix/) | Medium |
 | [0079-word-search](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0079-word-search/) | Medium |
@@ -26,6 +27,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0009-palindrome-number](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0009-palindrome-number/) | Easy |
+| [0048-rotate-image](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0048-rotate-image/) | Medium |
 | [0380-insert-delete-getrandom-o1](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 ## Design
 | Problem Name | Difficulty |
@@ -55,6 +57,7 @@
 ## Matrix
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0048-rotate-image](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0048-rotate-image/) | Medium |
 | [0073-set-matrix-zeroes](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0073-set-matrix-zeroes/) | Medium |
 | [0074-search-a-2d-matrix](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0074-search-a-2d-matrix/) | Medium |
 | [0079-word-search](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0079-word-search/) | Medium |
