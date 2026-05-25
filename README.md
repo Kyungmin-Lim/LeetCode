@@ -12,6 +12,7 @@
 | [0049-group-anagrams](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0049-group-anagrams/) | Medium |
 | [0053-maximum-subarray](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0053-maximum-subarray/) | Medium |
 | [0054-spiral-matrix](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0054-spiral-matrix/) | Medium |
+| [0055-jump-game](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0055-jump-game/) | Medium |
 | [0073-set-matrix-zeroes](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0073-set-matrix-zeroes/) | Medium |
 | [0074-search-a-2d-matrix](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0074-search-a-2d-matrix/) | Medium |
 | [0079-word-search](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0079-word-search/) | Medium |
@@ -73,6 +74,7 @@
 | [0005-longest-palindromic-substring](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0005-longest-palindromic-substring/) | Medium |
 | [0022-generate-parentheses](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0022-generate-parentheses/) | Medium |
 | [0053-maximum-subarray](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0053-maximum-subarray/) | Medium |
+| [0055-jump-game](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0055-jump-game/) | Medium |
 ## Sliding Window
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -122,6 +124,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0011-container-with-most-water](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0011-container-with-most-water/) | Medium |
+| [0055-jump-game](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0055-jump-game/) | Medium |
 ## Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
