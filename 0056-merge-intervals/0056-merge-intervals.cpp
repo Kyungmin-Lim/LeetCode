@@ -1,11 +1,13 @@
 class Solution {
 public:
     vector<vector<int>> merge(vector<vector<int>>& intervals) {
+        // Time complexity: O(NlogN)
+        // Space complexity: O(logN) - logN is needed for call stack for using sort function.
         vector<vector<int>> result;
 
         sort(intervals.begin(), intervals.end());
 
-        for(auto interval:intervals)
+        for(const auto& interval:intervals)
         {
             if(result.empty() || result.back()[1] < interval[0])
             {
