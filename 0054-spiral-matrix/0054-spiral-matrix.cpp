@@ -1,6 +1,8 @@
 class Solution {
 public:
     vector<int> spiralOrder(vector<vector<int>>& matrix) {
+        // Time complexity: O(NxM)
+        // Space complexity: O(1)
         vector<int> result;
 
         int top = 0;
