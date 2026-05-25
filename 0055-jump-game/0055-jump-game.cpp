@@ -1,6 +1,8 @@
 class Solution {
 public:
     bool canJump(vector<int>& nums) {
+        // Time complexity: O(N)
+        // Space complexity: O(1)
         int maxJump=0;
         int n = nums.size();
 
