@@ -35,6 +35,7 @@
 | ------- | ------- |
 | [0009-palindrome-number](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0009-palindrome-number/) | Easy |
 | [0048-rotate-image](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0048-rotate-image/) | Medium |
+| [0062-unique-paths](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0062-unique-paths/) | Medium |
 | [0380-insert-delete-getrandom-o1](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 ## Design
 | Problem Name | Difficulty |
@@ -77,6 +78,7 @@
 | [0022-generate-parentheses](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0022-generate-parentheses/) | Medium |
 | [0053-maximum-subarray](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0053-maximum-subarray/) | Medium |
 | [0055-jump-game](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0055-jump-game/) | Medium |
+| [0062-unique-paths](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0062-unique-paths/) | Medium |
 ## Sliding Window
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -162,4 +164,8 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0054-spiral-matrix](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0054-spiral-matrix/) | Medium |
+## Combinatorics
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0062-unique-paths](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0062-unique-paths/) | Medium |
 <!---LeetCode Topics End-->
