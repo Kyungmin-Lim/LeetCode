@@ -26,16 +26,17 @@ public:
     }
     */
 
-
+    // Time complexity: O(N)
+    // Space complexity: O(1)
     int climbStairs(int n) {
         if(n<=2)
         {
             return n;
         }
 
-
-        int prev1 = 2;
-        int prev2 = 1;
+        
+        int prev1 = 2; // distinct ways to reach step 2
+        int prev2 = 1; // distinct ways to reach step 1
         int curr = 0;
 
         for(int i=3; i<=n; i++)
