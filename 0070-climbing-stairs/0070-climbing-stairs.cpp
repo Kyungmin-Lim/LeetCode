@@ -1,5 +1,9 @@
 class Solution {
 public:
+    /*
+    // Default mehod using memoization and DP
+    // Time complexity: O(N)
+    // Space complexity: O(N)
     int getWay(int n, vector<int>& memo)
     {
         if(n<=2)
@@ -18,7 +22,31 @@ public:
     int climbStairs(int n) {
         vector<int> memo(n, -1);
 
-        return getWay(n, memo);
-        
+        return getWay(n, memo);        
+    }
+    */
+
+
+    int climbStairs(int n) {
+        if(n<=2)
+        {
+            return n;
+        }
+
+
+        int prev1 = 2;
+        int prev2 = 1;
+        int curr = 0;
+
+        for(int i=3; i<=n; i++)
+        {
+            curr = prev1 + prev2;
+            
+            prev2 = prev1;
+            prev1 = curr;
+        }
+        return curr;
+
+
     }
 };
