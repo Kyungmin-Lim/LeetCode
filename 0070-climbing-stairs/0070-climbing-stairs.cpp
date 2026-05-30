@@ -1,35 +1,24 @@
 class Solution {
 public:
-    int climbStairs(int n, unordered_map<int, int>&memo){
-        if((n>2)&&(memo.find(n)==memo.end()))
+    int getWay(int n, vector<int>& memo)
+    {
+        if(n<=2)
         {
-            memo[n] = climbStairs(n-1, memo)+climbStairs(n-2, memo);
+            memo[n-1] = n;
         }
-        else if(n==2)
+
+        if(memo[n-1] != -1)
         {
-            return 2;
+            return memo[n-1];
         }
-        else if(n==1)
-        {
-            return 1;
-        }
-        return memo[n];
+
+        memo[n-1] = getWay(n-1, memo) + getWay(n-2, memo);
+        return memo[n-1];
     }
-
-
-
     int climbStairs(int n) {
-        unordered_map<int, int> memo;
-        return climbStairs(n, memo);
-        // if(n>2)
-        // {
-        //     return (climbStairs(n-1)+climbStairs(n-2));
-        // }
-        // else if(n==2)
-        // {
-        //     return 2;
-        // }
-        // return 1;
+        vector<int> memo(n, -1);
+
+        return getWay(n, memo);
         
     }
 };
