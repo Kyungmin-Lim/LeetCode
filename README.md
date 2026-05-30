@@ -36,6 +36,7 @@
 | [0009-palindrome-number](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0009-palindrome-number/) | Easy |
 | [0048-rotate-image](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0048-rotate-image/) | Medium |
 | [0062-unique-paths](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0062-unique-paths/) | Medium |
+| [0070-climbing-stairs](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0070-climbing-stairs/) | Easy |
 | [0380-insert-delete-getrandom-o1](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 ## Design
 | Problem Name | Difficulty |
@@ -79,6 +80,7 @@
 | [0053-maximum-subarray](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0053-maximum-subarray/) | Medium |
 | [0055-jump-game](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0055-jump-game/) | Medium |
 | [0062-unique-paths](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0062-unique-paths/) | Medium |
+| [0070-climbing-stairs](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0070-climbing-stairs/) | Easy |
 ## Sliding Window
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -168,4 +170,8 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0062-unique-paths](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0062-unique-paths/) | Medium |
+## Memoization
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0070-climbing-stairs](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0070-climbing-stairs/) | Easy |
 <!---LeetCode Topics End-->
