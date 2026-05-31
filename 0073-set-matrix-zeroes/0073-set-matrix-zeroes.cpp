@@ -1,13 +1,15 @@
 class Solution {
 public:
     void setZeroes(vector<vector<int>>& matrix) {
+        // Time complexity: O(mxn)
+        // Space complexity: O(1)
         bool rowZero = false;
         bool colZero = false;
 
         int row = matrix.size();
         int col = matrix[0].size();
 
-        for(int i = 1; i<row; i++)
+        for(int i = 0; i<row; i++)
         {
             if(matrix[i][0] == 0)
             {
@@ -48,7 +50,7 @@ public:
         {
             if(matrix[0][i]==0)
             {
-                for(int j=0; j<row; j++)
+                for(int j=1; j<row; j++)
                 {
                     matrix[j][i]=0;
                 }
