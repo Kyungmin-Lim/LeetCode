@@ -1,6 +1,8 @@
 class Solution {
 public:
     string minWindow(string s, string t) {
+        // Time complexity: O(N)
+        // Space complexity: O(1)
         int num = s.size();
         string result;
         int char_num[128]={0};
