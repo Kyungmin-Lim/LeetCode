@@ -1,6 +1,9 @@
 class Solution {
 public:
     int numDecodings(string s) {
+        // 점화식 개념을 완벽히 이해해야함. 어려운 문제.
+        // Time complexity: O(N) - N is the number of characters in string s
+        // Space complexity: O(1)
         if(s[0]=='0')
         {
             return 0;
@@ -32,7 +35,7 @@ public:
 
             prev2=prev1;
             prev1=curr;
-            
+
         }
         return curr;       
         
