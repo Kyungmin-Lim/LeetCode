@@ -12,28 +12,27 @@
 class Solution {
 public:
     int maxDepth(TreeNode* root) {
-        int maxDepthLeft=0;
-        int maxDepthRight=0;
-
+        if(!root)
+        {
+            return 0;
+        }
         int result=0;
 
-        if(root==nullptr)
-        {
-            return result;
-        }
+        result = DFS(0, root);
 
-        if(root->right)
-        {
-            maxDepthRight=maxDepth(root->right);
-        }
-        
-        if(root->left)
-        {
-            maxDepthLeft=maxDepth(root->left);
-        }
-
-        result = 1+max(maxDepthRight, maxDepthLeft);
-        return result;
-        
+        return result;        
     }
+    int DFS(int depth, TreeNode* node){
+        if(!node)
+        {
+            return depth;
+        }
+
+        int maxDepth=0;
+        maxDepth = max(DFS(depth+1, node->left), DFS(depth+1, node->right));
+        return maxDepth;
+
+    }
+    
+
 };
