@@ -18,6 +18,7 @@
 | [0073-set-matrix-zeroes](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0073-set-matrix-zeroes/) | Medium |
 | [0074-search-a-2d-matrix](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0074-search-a-2d-matrix/) | Medium |
 | [0079-word-search](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0079-word-search/) | Medium |
+| [0121-best-time-to-buy-and-sell-stock](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0121-best-time-to-buy-and-sell-stock/) | Easy |
 | [0137-single-number-ii](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0137-single-number-ii/) | Medium |
 | [0215-kth-largest-element-in-an-array](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0215-kth-largest-element-in-an-array/) | Medium |
 | [0373-find-k-pairs-with-smallest-sums](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0373-find-k-pairs-with-smallest-sums/) | Medium |
@@ -87,6 +88,7 @@
 | [0062-unique-paths](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0062-unique-paths/) | Medium |
 | [0070-climbing-stairs](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0070-climbing-stairs/) | Easy |
 | [0091-decode-ways](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0091-decode-ways/) | Medium |
+| [0121-best-time-to-buy-and-sell-stock](https://github.com/Kyungmin-Lim/LeetCode/tree/main/0121-best-time-to-buy-and-sell-stock/) | Easy |
 ## Sliding Window
 | Problem Name | Difficulty |
 | ------- | ------- |
