@@ -14,25 +14,13 @@ public:
     int maxDepth(TreeNode* root) {
         if(!root)
         {
-            return 0;
-        }
-        int result=0;
-
-        result = DFS(0, root);
-
-        return result;        
-    }
-    int DFS(int depth, TreeNode* node){
-        if(!node)
-        {
-            return depth;
+            return 0;            
         }
 
-        int maxDepth=0;
-        maxDepth = max(DFS(depth+1, node->left), DFS(depth+1, node->right));
-        return maxDepth;
+        int leftDepth = maxDepth(root->left);
+        int rightDepth = maxDepth(root->right);
 
+        return 1+max(leftDepth, rightDepth);
+        
     }
-    
-
 };
