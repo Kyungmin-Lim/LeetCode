@@ -1,6 +1,13 @@
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
+        // Time complexity: O(N)
+        // Space complexity: O(1)
+        if(prices.size()<=1)
+        {
+            return 0;
+        }
+        
         int minVal = prices[0];
         int result=0;
 
