@@ -12,6 +12,8 @@
 class Solution {
 public:
     int maxDepth(TreeNode* root) {
+        // Time complexity: O(N)
+        // Space complexity: O(H) - H is the height of tree
         if(!root)
         {
             return 0;            
