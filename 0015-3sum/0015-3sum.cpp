@@ -2,7 +2,7 @@ class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
         // Time complexity: O(N^2)
-        // Space complexity: O(1)
+        // Space complexity: O(1) or O(logN) system memory for sorting
         vector<vector<int>> result;
 
         if(nums.size()<3)
