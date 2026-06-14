@@ -13,14 +13,8 @@ public:
 
         for(int i=1; i<prices.size(); i++)
         {
-            if(prices[i]<minVal)
-            {
-                minVal = prices[i];
-            }
-            if(prices[i]-minVal > result)
-            {
-                result = prices[i]-minVal;
-            }
+            minVal = min(prices[i], minVal);
+            result = max(prices[i]-minVal, result);
         }
         return result;
     }
