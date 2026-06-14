@@ -5,7 +5,6 @@ public:
         // Space complexity: O(1)
         int result=0;
         int minVal=prices[0];
-        int maxVal=-1;
 
         if(prices.size()==1)
         {
