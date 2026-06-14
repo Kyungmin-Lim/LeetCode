@@ -1,53 +1,56 @@
 class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
-        // Time complexity: O(n^2)
+        // Time complexity: O(N^2)
         // Space complexity: O(1)
         vector<vector<int>> result;
-        int n = nums.size();
-        if(n<3)
+
+        if(nums.size()<3)
         {
             return result;
         }
-        
+        int start = 1;
+        int end = nums.size()-1;
 
         sort(nums.begin(), nums.end());
 
-        for(int i=0; i<n-2; i++)
+        for(int i=0; i<nums.size()-2; i++)
         {
-            if(i>0 && nums[i]==nums[i-1])
+            start = i+1;
+            end = nums.size()-1;
+
+            if(i-1>=0 && nums[i]==nums[i-1])
             {
                 continue;
             }
-            int start=i+1;
-            int end=n-1;
             while(start<end)
             {
-                if(-1*nums[i] == nums[start]+nums[end])
+                int sum = nums[i]+nums[start]+nums[end];
+                if(sum == 0)
                 {
                     result.push_back({nums[i], nums[start], nums[end]});
-                    end--;                    
                     start++;
+                    end--;
 
-                    while(nums[end] == nums[end+1] && start<end)
-                    {
-                        end--;
-                    }
-                    while(nums[start] == nums[start-1] && start<end)
+                    while(start<end && nums[start]==nums[start-1])
                     {
                         start++;
                     }
+                    while(start<end && nums[end]==nums[end+1])
+                    {
+                        end--;
+                    }
                 }
-                else if(-1*nums[i] > nums[start]+nums[end])
-                {
-                    start++;
-                }
-                else //(-1*nums[i] < nums[start]+nums[end])
+                else if(0 < sum)
                 {
                     end--;
                 }
+                else
+                {
+                    start++;
+                }               
+
             }
-           
         }
         return result;
         
